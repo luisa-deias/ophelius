@@ -1,0 +1,19 @@
+body { 
+    padding-top: 65px; 
+}
+
+.lateral-bar{
+    margin-left: 10px;
+    min-width: 12%;
+}
+
+.left{
+    width: 12%;
+    float: left;
+}
+
+.right {
+    width: 80%;
+    margin-left: 12px;
+    position: fixed;
+}

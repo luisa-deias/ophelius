@@ -1,0 +1,52 @@
+html, body {
+    background:#202020;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bootstrap-duallistbox-container {
+    width: 100%;
+    margin: auto;
+}
+
+#rightt {
+    width: 45%;
+    margin: 10px;
+    float: right;
+}
+
+#listf {
+    float: left;
+}
+
+* {margin: 0; padding: 0;}
+ 
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+ 
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+    width: 250px;
+    height: auto;
+}
+ 
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+
+.list-group-item {
+    background: #202020;
+}
+.navbar-default {
+    background: #202020;
+}

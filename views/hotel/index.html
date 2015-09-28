@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/hotels/css/hotel.css">
+        <script src="/js/angular.min.js"></script>
+        <script src="/js/angular-route.min.js"></script>
+        <script src="/js/ui-bootstrap-tpls.min.js"></script>
+        <script src="/hotels/js/hotel.js"></script>
+        <script src="/hotels/js/controllers.js"></script>
+        <script src="/hotels/js/services.js"></script>
+    </head>
+    <body ng-app="starter" ng-controller="HotelCtrl">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/hotel/#/">
+                        <img alt="Brand" src="/img/user.png">
+                    </a>
+                    <a class="navbar-brand page-scroll" href="/hotel/#/" id="hotel_name">{{hotel_name}}</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/">MAIN</a>
+                        </li>                            
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/newuser/">NEW USER</a>
+                        </li>                    
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/guests">GUESTS</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/settings">SETTINGS</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/hotel/logout">LOGOUT</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+        <div class="left">
+            <accordion>
+                <accordion-group is-open="status.open" class="lateral-bar">
+                    <accordion-heading >
+                        ROOMS <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </accordion-heading>
+                    <ul class="list-group">
+                        <a ng-repeat="user in users" ng-href="/hotel/#/user/{{user._id}}"><li class="list-group-item">{{user.guest.room}}</li></a>
+                    </ul>
+                </accordion-group>
+            </accordion>
+            <accordion>
+                <accordion-group is-open="status.open" class="lateral-bar">
+                    <accordion-heading >
+                        SERVICES <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </accordion-heading>
+                    <ul class="list-group">
+                        <a ng-repeat="service in services" ng-href="/hotel/#/service/{{service._id}}"><li class="list-group-item">{{service.service.name}}</li></a>
+                    </ul>
+                </accordion-group>
+            </accordion>
+            <accordion>
+                <accordion-group is-open="status.open" class="lateral-bar">
+                    <accordion-heading >
+                        USERS <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </accordion-heading>
+                    <ul class="list-group">
+                        <a ng-href="/hotel/#/newuser"><li class="list-group-item">New User</li></a>
+                        <a ng-href="/hotel/#/newservice"><li class="list-group-item">New Service</li></a>
+                    </ul>
+                </accordion-group>
+            </accordion>
+        </div>
+        <di class="right">
+            <ng-view></ng-view> 
+        </di>
+
+    </body>
+</html>

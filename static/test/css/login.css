@@ -1,0 +1,62 @@
+/************* login */
+html, body{
+    background: #40393d;
+}
+
+.logo {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 70px;
+    width: 85px;
+    border-radius: 100px;
+    height: 85px;
+    position: relative;
+    bottom: -15px;
+}
+.logo img {
+    width: 85px;
+    height: 85px;
+    border-radius: 100px;
+    margin: auto;
+    display: block;
+}
+
+.navbar {
+    visibility: hidden!important;
+}
+
+.form-signin {
+    margin-top: 40px; 
+    text-align:center;
+    color: white;
+
+}
+.form-signin input[type="text"],input[type="password"] {
+    margin: auto;
+    height: 40px;
+}
+
+.btn-my {
+    letter-spacing: 4px;
+    color: white;
+    background: #3896af;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    padding: 1px 1px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    height: 30px;
+}
+
+.btn-my:active {
+    color: white;  
+    border: 0;
+    background: #3896af;
+    border-color: rgba(0,0,0,0);
+}
+/************* login end */
+/************* ********************************/

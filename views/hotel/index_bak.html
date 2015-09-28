@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ophelius</title>
+
+        <!--  bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-duallistbox.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/hotel.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="/hotel/#" id="title_hotel"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="/hotel/#">MAIN</a>
+                        </li>                            
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/services">SERVICES</a>
+                        </li>                    
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/guests">GUESTS</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/hotel/#/settings">SETTINGS</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/hotel/logout">LOGOUT</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+
+        <script type="text/x-handlebars" id="intro">
+            <br><br><br>
+            <h1>HOME</h1>
+            <ul id="messages" class="list-group"></ul>
+        </script>
+        <script type="text/x-handlebars" id="message">
+            <br><br><br>
+            <h1>MESSAGE</h1>
+            <ul id="message" class="list-group"></ul>
+            <form role="form" method="post" id='book_resp'> 
+                <input type="text" class="form-control" name="message">
+                <button type="submit" class="btn btn-warning btn-lg" onclick="double_button_ok()">Confirm</button>
+                <button type="submit" class="btn btn-warning btn-lg" onclick="double_button_ko()">Reject</button>
+            </form>	      
+        </script>        
+
+        <script type="text/x-handlebars" id="services">
+            <br><br><br>
+            <h1>SERVICES</h1>
+            <a href="/hotel/#/services/create_service">ADD SERVICE</a>
+            <input id="search" name="search" placeholder="Start typing here" type="text" data-list="#listc">
+            <ul id="listc" class="list-group"></ul>
+        </script>    
+
+        <script type="text/x-handlebars" id="service">
+            <br><br><br>
+            <h1>SERVICE</h1>
+            <ul id="listf" class="list-group"> </ul>
+            <div id='rightt'>
+                <form id="doubleT" method="post"></form>
+                <form id="doubleC" method="post"></form>
+            </div>     
+        </script>           
+
+        <script type="text/x-handlebars" id="serviceChange">
+            <br><br><br>
+            <h1>SERVICE CHANGE</h1>
+            <form class="form-signin" method="post" id="listh">
+                <div>
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name">
+                    <br>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <input type="text" class="form-control" name="description">
+                </div>       
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>  
+        </script>          
+
+        <script type="text/x-handlebars" id="create_service">
+            <br><br><br><br><br>
+            <form role="form" action="/hotel/create_service" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter the name of Service" name="name" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter description of Service" name="description" >
+                </div>                
+                <button type="submit" class="btn btn-warning btn-lg">Create</button>
+            </form>	        
+        </script>
+
+        <script type="text/x-handlebars" id="guests">
+            <br><br><br>
+            <h1>GUESTS</h1>
+            <a href="/hotel/#/guests/create_guest">ADD GUEST</a>
+            <input id="search" name="search" placeholder="Start typing here" type="text" data-list="#lista">
+            <ul id="lista" class="list-group"></ul>
+
+        </script>
+
+        <script type="text/x-handlebars" id="guest">
+            <br><br><br>
+            <h1>GUESTS ID</h1>
+            <ul id="listd" class="list-group"></ul>
+        </script>        
+
+        <script type="text/x-handlebars" id="create_guest">
+            <br><br><br>
+            <h1>CREATE GUESTS</h1>        
+
+        </script>
+
+        <script type="text/x-handlebars" id="settings">
+            <br><br><br>
+            <h1>SETTINGS</h1>
+            <a href="/hotel/#/settings/create_seller">ADD TEAM</a>
+            <input id="search" name="search" placeholder="Start typing here" type="text" data-list="#listb">
+            <ul id="listb" class="list-group"></ul>
+        </script>
+
+        <script type="text/x-handlebars" id="setting">
+            <br><br><br>
+            <h1>SETTING</h1>
+            <a href="/hotel/#/settings/create_seller">ADD TEAM</a>
+            <ul id="liste" class="list-group"></ul>
+        </script>   
+        <script type="text/x-handlebars" id="settingChange">
+            <br><br><br>
+            <h1>SETTING CHANGE</h1>
+            <form class="form-signin" method="post" id="listg">
+                <div>
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="username">
+                    <br>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>       
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>  
+        </script>               
+
+
+        <script type="text/x-handlebars" id="create_seller" >
+            <br><br><br>
+            <h1>CREATE TEAM</h1>
+            <form action="/hotel/seller_signup" class="form-signin" method="post">
+                <div>
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="username">
+                    <br>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>       
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>           
+
+        </script>    
+
+
+        <!--   jquery -->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery.hideseek.min.js"></script>
+        <!--  bootstrap -->
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.bootstrap-duallistbox.min.js"></script>  
+        <!-- handlebars -->
+        <script src="/js/handlebars-v2.0.0.js"></script>
+        <!-- ember -->
+        <script src="/js/ember.min.js"></script>
+        <!-- app -->
+        <script src="/js/app_hotel.js"></script>
+        <!-- index -->
+        <script src="/js/hotel.js"></script>
+
+    </body>
+
+</html>

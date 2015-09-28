@@ -1,0 +1,22 @@
+<div class="row" class="fixtop">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <h2>{{service.service.name}}</h2>
+            <img ng-src="{{service.service.image_big}}">
+            <div class="caption">
+                <h3>{{service.service.description}}</h3>
+                <accordion>
+                    <accordion-group is-open="status.open" class="lateral-bar">
+                        <accordion-heading >
+                            Info <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </accordion-heading>
+                        <ul class="list-group">
+                            <p>{{service.service.description_big}}</p>
+                        </ul>
+                    </accordion-group>
+                </accordion>
+                <p><a ng-href='/hotel/#/editservice/{{service._id}}' class="btn btn-primary" role="button">Edit Service</a> <a href="/hotel/service_drop/{{service._id}}" class="btn btn-default" role="button">Drop Service</a></p>
+            </div>
+        </div>
+    </div>
+</div>

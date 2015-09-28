@@ -1,0 +1,80 @@
+html,
+body {
+    background: url('/img/background_hotel.jpg') center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    padding: 2%;
+}
+.bootstrap-duallistbox-container {
+    width: 100%;
+    margin: auto;
+}
+#rightt {
+    width: 45%;
+    margin: 10px;
+    float: right;
+}
+#listf {
+    float: left;
+}
+h3 {
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+li p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+li {
+    padding: 10px;
+    overflow: auto;
+}
+.navbar-default {
+    background: rgba(0, 0, 0, .9);
+}
+#listc, #listcc, #listf {
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .65);
+}
+#listc img, #listcc img, #listf img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+#search {
+    border-radius: 10px;
+    width: 75%;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: grey;
+    text-align: center;
+    font-size: 18px;
+}
+#topicons {
+    width: 140px;
+    border-radius: 100px;
+}
+a.page-scroll {
+    margin: auto;
+}
+
+#listTop {
+    width: 240px;;
+    margin: auto;
+}
+#back {
+    width: 23%;
+    height: 50px;
+    margin: auto;
+    vertical-align: 2px;
+    background-color: grey;
+    margin-bottom: 40px;
+}
+
+#bbook {
+    width: 100%;
+}

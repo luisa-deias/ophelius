@@ -1,0 +1,43 @@
+{
+  "name": "OPHELIUS",
+  "version": "0.0.1",
+  "description": "Ophelius - Your Hotelvolution",
+  "keywords": [
+    "Ophelius",
+    "Hotel",
+    "Services",
+    "Relax"
+  ],
+  "author": {
+    "name": "Enrico Garia",
+    "email": "enricogaria@gmail.com",
+    "url": "http://ophelius.com/"
+  },
+  "homepage": "http://ophelius.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.10.0",
+    "cookie-parser": "^1.3.3",
+    "cors": "^2.5.2",
+    "emailjs": "^0.3.12",
+    "express": "^4.10.6",
+    "express-session": "^1.9.3",
+    "mongoose": "^3.8.20",
+    "morgan": "^1.5.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "request-ip": "0.0.3"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}

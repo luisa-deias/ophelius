@@ -1,0 +1,92 @@
+.navbar{
+    background:rgba(0, 0, 0, 0) !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar:hover{
+    background:rgb(0, 0, 0) !important;
+}
+
+#room{
+    text-align: center;
+    color: white;
+}
+
+.categorie {
+	width: 100%;
+	margin: auto;
+	width: 100px;
+	border-radius: 100px;
+	height: 100px;
+	position: relative;
+	bottom: -15px;
+}
+
+.categorie img {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	margin: auto;
+    margin-bottom: 20px;
+	display: block;
+}
+
+.btn-ty {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 98%;
+    height: 100px;
+    padding: 1px 1px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 100, 128, .5);
+    text-align: left;
+}
+
+.btn-ty:active {
+    background-color: #e6e6e6;
+    background-image: none;
+    outline: 0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-ty:hover {
+    background: rgba(0, 100, 128, .5);
+}
+
+.btn-ty img {
+    width:80px;
+    height:auto;
+    border-radius: 10px;
+    margin-right: 20px; 
+}
+
+.card {
+
+}
+.full-image {
+    width: 100%;
+}
+
+.btn-book{
+    padding-top: 0;
+}
+.btn-book button{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.item {
+    color: white;
+    text-align: center;
+}
+
+.price{
+    font-size: 22px;
+}

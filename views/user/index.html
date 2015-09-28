@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ophelius</title>
+
+        <!--  bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-duallistbox.min.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="/user/#" id="title_user"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="/user/#">MAIN</a>
+                        </li>                            
+                        <li>
+                            <a class="page-scroll" href="/user/#/services">ALL SERVICES</a>
+                        </li>                    
+                        <li>
+                            <a class="page-scroll" href="/user/#/settings">MESSAGES</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/user/logout">LOGOUT</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+
+        <script type="text/x-handlebars" id="intro">
+            <br><br><br><br>
+            <div id="listTop">
+              <ul>
+                <li>
+                    <a class="page-scroll" href="/user/#/services/category/culture">
+                        <img id="topicons" src="/img/culture.png">
+                    </a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="/user/#/services/category/sport">
+                  <img id="topicons" src="/img/sport.png">
+                    </a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="/user/#/services/category/food">
+                  <img id="topicons" src="/img/food.png">
+                    </a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="/user/#/services/category/confort">
+                  <img id="topicons" src="/img/life.png">
+                    </a>
+                </li>
+              </ul>
+            </div>
+        </script>        
+        
+        <script type="text/x-handlebars" id="services">
+            <br><br><br>
+            <a href="/user/#" id="back" class="btn btn-warning btn-lg">back</a>
+            <input id="search" name="search" placeholder="Type Here and find Your Service." type="text" data-list="#listc">
+            <ul id="listc" class="list-group"></ul>
+        </script>
+        <script type="text/x-handlebars" id="services_category">
+            <br><br><br>
+            <a href="/user/#" id="back" class="btn btn-warning btn-lg">back</a>
+            <input id="search" name="search" placeholder="Type Here and find Your Service." type="text" data-list="#listcc">
+            <ul id="listcc" class="list-group"></ul>
+        </script>
+        
+        <script type="text/x-handlebars" id="service">
+            <br><br><br>
+            <a href="/user/#" id="back" class="btn btn-warning btn-lg">back</a>
+            <ul id="listf" class="list-group" style="text-align:center;"> </ul>
+            <form role="form" method="post" id='booker'>              
+                <button id="bbook" type="submit" class="btn btn-warning btn-lg">Book</button>
+            </form>	    
+        </script>   
+    
+        <script type="text/x-handlebars" id="settings">
+            <br><br><br>
+            <input id="search" name="search" placeholder="Start typing here" type="text" data-list="#settingz">
+            <ul id="settingz" class="list-group"></ul>
+        </script>    
+
+        <!--   jquery -->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery.hideseek.min.js"></script>
+        <!--  bootstrap -->
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.bootstrap-duallistbox.min.js"></script>
+        <!-- handlebars -->
+        <script src="/js/handlebars-v2.0.0.js"></script>
+        <!-- ember -->
+        <script src="/js/ember.min.js"></script>
+        <!-- app -->
+        <script src="/js/app_user.js"></script>
+        <!-- index -->
+        <script src="/js/user.js"></script>
+
+    </body>
+
+</html>

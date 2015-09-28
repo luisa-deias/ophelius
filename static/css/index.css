@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+html,
+body {
+    color: white;
+}
+.form-signin {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: none;
+    border: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgba(168, 168, 168, 0);
+    border-color: rgba(168, 168, 168, 0);
+}
+.form-control {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: rgba(168, 168, 168, 0.1);
+    border-color: rgba(168, 168, 168, 0.1);
+}
+.form-control:focus {
+    border-color: rgba(168, 168, 168, 0.1);
+}
+.btn-my {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 auto;
+    background: url("/img/user.png");
+    background-color: rgba(168, 168, 168, 0.1);
+    background-size: 70px 70px;
+    border-color: rgba(168, 168, 168, 0.1);
+}
+.btn-my:hover {
+    background-color: rgba(168, 168, 168, 0.1);
+    border-color: rgba(168, 168, 168, 0.1);
+}
+.btn-my:active {
+    background: url("/img/user.png");
+    background-size: 70px 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.avatar {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 85px;
+    border-radius: 100px;
+    height: 85px;
+    position: absolute;
+    display: none;
+}
+.avatar img {
+    width: 85px;
+    height: 85px;
+    border-radius: 100px;
+    margin: auto;
+    display: block;
+}
+#terms {
+    position: absolute;
+    bottom: 12px;
+    font-size: 10px;
+    text-align: center;
+    display: none;
+    width: 100%;
+}
+#terms a {
+    font-size: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+.wrapper {
+    max-width: 100%;
+    height: 400px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.lebel {
+    width: 100%;
+    text-align: center;
+}
+
+/*@media screen and (min-width: 800px) {
+.form-control{ width: 600px;}
+}
+
+@media screen and (min-width: 1366px) {
+.form-control{ width: 420px;}
+}
+@media screen and (min-width: 1440px) {
+.form-control{ width: 500px;}
+}
+@media screen and (min-width: 1600px) {
+.form-control{ width: 600px;}
+}
+@media screen and (min-width: 1920px) {
+.form-control{ width: 800px;}
+}*/
+
+@media screen and (min-height: 400px) {
+    .form-control {
+        width: 300px;
+        height: 30px;
+    }
+    .wrapper {
+        height: 400px;
+    }
+}
+@media screen and (min-height: 600px) {
+    .form-control {
+        width: 400px;
+    }
+    .wrapper {
+        height: 400px;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .form-control {
+        width: 900px;
+        height: 60px;
+    }
+    .wrapper {
+        height: 800px;
+    }
+}
+@media screen and (min-height: 1600px) {
+    .form-control {
+        width: 1133px;
+        height: 80px;
+    }
+    .wrapper {
+        height: 800px;
+    }
+}
+@media screen and (min-height: 1600px) {
+    .form-control {
+        width: 300px;
+    }
+}
+@media screen and (min-height: 1920px) {
+    .form-control {
+        width: 300px;
+    }
+}
